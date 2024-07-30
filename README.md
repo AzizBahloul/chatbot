@@ -1,6 +1,15 @@
 # chatbot
 chatgpt 5 turbo supercharger v12 5.4L Peugeot  partner 
 
+## Running the Chatgpt_5_Turbo_Supercharge App
+
+### On Windows
+
+- Double-click `Chatgpt_5_Turbo_Supercharge.bat` to start the Streamlit app.
+
+### On macOS/Linux
+
+- Open a terminal and run `./Chatgpt_5_Turbo_Supercharge.sh` to start the Streamlit app.
 
 
 # Chatbot Project
