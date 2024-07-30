@@ -1,6 +1,6 @@
 import pandas as pd
 import pickle
-from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 from textblob import TextBlob
 import os
@@ -17,14 +17,18 @@ def load_data():
 def train_model():
     try:
         data = load_data()
-        vectorizer = CountVectorizer()
+        print(f"Data loaded. Shape: {data.shape}")
+
+        vectorizer = TfidfVectorizer()  # Using TfidfVectorizer instead of CountVectorizer
         X = vectorizer.fit_transform(data['question'])
         y = data['responses']
+        
+        print(f"Feature matrix shape: {X.shape}")
+        print(f"Labels shape: {y.shape}")
         
         model = MultinomialNB()
         model.fit(X, y)
         
-        # Save model
         with open(MODEL_PATH, 'wb') as f:
             pickle.dump((vectorizer, model), f)
         
@@ -47,6 +51,9 @@ def predict_response(user_input, model):
     corrected_input = correct_spelling(user_input)
     user_input_vec = vectorizer.transform([corrected_input])
     prediction = classifier.predict(user_input_vec)
+    print(f"User input: {user_input}")
+    print(f"Corrected input: {corrected_input}")
+    print(f"Prediction: {prediction[0]}")
     return prediction[0]
 
 if __name__ == '__main__':

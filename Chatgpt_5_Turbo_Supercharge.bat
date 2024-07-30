@@ -1,0 +1,3 @@
+@echo off
+echo Starting Chatgpt_5_Turbo_Supercharge...
+streamlit run app.py
