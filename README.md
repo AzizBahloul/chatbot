@@ -1,4 +1,4 @@
-# chatbot
+# FOR Chatbot (Manual data input) (python + streamlit)
 chatgpt 5 turbo supercharger v12 5.4L Peugeot  partner 
 
 # Running the Chatgpt_5_Turbo_Supercharge App
@@ -50,3 +50,100 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 For any questions or feedback, please reach out to [your-email@example.com](mailto:your-email@example.com).
+
+
+# FOR Chatbot (Custom dataset)(js+react)
+
+
+
+# Chatbot Project
+
+## Overview
+
+This project consists of a React frontend for interacting with a chatbot and an Express backend that handles the chat logic using Dialogflow. The frontend allows users to send messages and receive responses from the chatbot, while the backend processes these messages and communicates with Dialogflow to generate responses.
+
+## Technologies Used
+
+- Frontend: React, Bootstrap
+- Backend: Node.js, Express
+- Dialogflow: Google Dialogflow API
+- Cloudinary: For media management (if applicable)
+
+## Setup Instructions
+
+### Frontend Setup
+
+1. Clone the Repository:
+
+   git clone <repository-url>
+   cd <repository-directory>
+
+2. Install Dependencies:
+
+   npm install
+
+3. Start the Development Server:
+
+   npm start
+
+   The frontend will be available at http://localhost:3000.
+
+### Backend Setup
+
+1. Clone the Repository:
+
+   git clone <repository-url>
+   cd <repository-directory>
+
+2. Install Dependencies:
+
+   npm install
+
+3. Configure Environment Variables:
+
+   Create a .env file in the root directory with the following content:
+
+   PORT=5000
+   DB_URL=<your-mongodb-url>
+   DB_NAME=<your-database-name>
+   EMAIL=<your-email>
+   PASSWORD=<your-password>
+   CLOUDINARY_CLOUD_NAME=<your-cloud-name>
+   CLOUDINARY_API_KEY=<your-api-key>
+   CLOUDINARY_API_SECRET=<your-api-secret>
+   DIALOGFLOW_PRIVATE_KEY=<your-private-key>
+   DIALOGFLOW_CLIENT_EMAIL=<your-client-email>
+
+4. Start the Server:
+
+   npm start
+
+   The backend will be available at http://localhost:5000.
+
+## Endpoints
+
+- POST /api/Chat
+
+  - Request Body:
+
+    {
+      "message": "Your message here"
+    }
+
+  - Response:
+
+    {
+      "message": "Response from chatbot"
+    }
+
+## Usage
+
+1. Open the frontend application in your browser (http://localhost:3000).
+2. Type a message into the input field and press Enter or click the "Send" button.
+3. The chatbot's response will be displayed below the input field.
+
+## Troubleshooting
+
+- CORS Issues:
+  Ensure that the backend server is running and CORS is properly configured.
+
