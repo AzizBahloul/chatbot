@@ -1,6 +1,4 @@
-Here's the updated README with links to each chatbot description at the beginning:
 
----
 
 # **Chatbot Project Overview**
 
