@@ -1,4 +1,12 @@
-Here’s the updated README with the chatbot titles highlighted in red:
+Here's the updated README with links to each chatbot description at the beginning:
+
+---
+
+# **Chatbot Project Overview**
+
+1. **[Chatbot (Manual Data Input) (Python + Streamlit)](#chatbot-manual-data-input-python--streamlit)**
+2. **[Chatbot (Custom Dataset) (JS + React)](#chatbot-custom-dataset-js--react)**
+3. **[EarlyLearnerAI (Python + Streamlit )](#earlylearnerai-python)**
 
 ---
 
