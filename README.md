@@ -1,5 +1,8 @@
+Here’s the updated README with the chatbot titles highlighted in red:
 
-# Chatbot (Manual Data Input) (Python + Streamlit)
+---
+
+# **Chatbot (Manual Data Input) (Python + Streamlit)**
 
 **ChatGPT 5 Turbo Supercharger V12 5.4L Peugeot Partner**
 
@@ -97,7 +100,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-# Chatbot (Custom Dataset) (JS + React)
+# **Chatbot (Custom Dataset) (JS + React)**
 
 ## Overview
 
@@ -205,7 +208,7 @@ This project consists of a React frontend for interacting with a chatbot and an 
 
 ---
 
-# EarlyLearnerAI (Python)
+# **EarlyLearnerAI (Python)**
 
 **EarlyLearnerAI** is an adaptive chatbot designed to mimic the curiosity and learning style of a 4-year-old child. It engages in conversation, asks for clarifications when needed, and dynamically updates its knowledge base based on user input.
 
@@ -298,3 +301,4 @@ This project consists of a React frontend for interacting with a chatbot and an 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
+---
