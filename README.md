@@ -1,10 +1,12 @@
+Here's the updated `README.md` with the integration of the `Chatbot (FastAPI) (Python)` section, including instructions for usage and testing with Postman:
 
-
-# **Chatbot Project Overview**
+```markdown
+# Chatbot Project Overview
 
 1. **[Chatbot (Manual Data Input) (Python + Streamlit)](#chatbot-manual-data-input-python--streamlit)**
 2. **[Chatbot (Custom Dataset) (JS + React)](#chatbot-custom-dataset-js--react)**
-3. **[EarlyLearnerAI (Python + Streamlit )](#earlylearnerai-python)**
+3. **[EarlyLearnerAI (Python)](#earlylearnerai-python)**
+4. **[Chatbot (FastAPI) (Python)](#chatbot-fastapi-python)**
 
 ---
 
@@ -308,3 +310,128 @@ This project consists of a React frontend for interacting with a chatbot and an 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
+
+# **Chatbot (FastAPI) (Python)**
+
+## Overview
+
+This project provides a chatbot API served via FastAPI. The chatbot model is trained on a custom dataset and can handle user queries through a RESTful API. The model is designed to correct spelling errors and typing mistakes in user input.
+
+## Project Structure
+
+- `chatbot/`
+  - `__init__.py`: Package initialization.
+  - `chatbot.py`: Contains the `Chatbot` class for handling user queries.
+  - `training.py`: Script for training the model and saving it as `model.pkl`.
+  - `utils.py`: Utility functions for text preprocessing.
+  - `dataset.csv`: CSV file with question-response pairs for training.
+  - `model.pkl`: Pickled model file.
+- `fastapi_service/`
+  - `__init__.py`: Package initialization.
+  - `main.py`: FastAPI application serving the chatbot API.
+  - `requirements.txt`: Python dependencies.
+- `
+
+docker-compose.yml`: Docker configuration file (currently not used).
+
+## Installation
+
+
+2. **Create and Activate Virtual Environment:**
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+
+3. **Install Required Packages:**
+
+   ```bash
+   pip install -r fastapi_service/requirements.txt
+   pip install -r requirements.txt
+   ```
+
+4. **Train the Model:** Run the `training.py` script to generate the `model.pkl` file:
+
+   ```bash
+   python chatbot/training.py
+   ```
+
+5. **Start the FastAPI Server:**
+
+   ```bash
+   cd fastapi_service
+   uvicorn main:app --host 0.0.0.0 --port 8000
+   ```
+
+   The server will be available at [http://localhost:8000](http://localhost:8000).
+
+## API Endpoints
+
+### **POST /chat**
+
+- **Description:** Submit a question to the chatbot and receive a response.
+
+- **Request Body (JSON):**
+
+  ```json
+  {
+    "question": "Your question here"
+  }
+  ```
+
+- **Response (JSON):**
+
+  ```json
+  {
+    "response": "The chatbot's response here"
+  }
+  ```
+
+## Testing with Postman
+
+1. **Open Postman.**
+
+2. **Create a New Request:**
+   - Click on "New" and select "Request."
+
+3. **Set Request Type to POST:**
+   - Select "POST" from the dropdown menu.
+
+4. **Enter Request URL:**
+   - Set the URL to `http://localhost:8000/chat`.
+
+5. **Set Up Request Body:**
+   - Go to the "Body" tab.
+   - Select "raw" and choose "JSON" from the dropdown menu.
+   - Enter the JSON data in the body:
+
+     ```json
+     {
+       "question": "How do I reset my password?"
+     }
+     ```
+
+6. **Send the Request:**
+   - Click the "Send" button.
+
+7. **View the Response:**
+   - Check the response section to see the chatbot's reply.
+
+## Notes
+
+- Ensure the FastAPI server is running before testing with Postman.
+- Modify the question in the request body to test different queries.
+
+For any issues or questions, please contact [Aziz Bahloul](mailto:azizbahloul3@gmail.com).
+
+## Contributing
+
+Feel free to open issues or submit pull requests. Contributions to improve the chatbot and its features are welcome!
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+```
+
+This `README.md` provides a comprehensive overview of the `Chatbot (FastAPI) (Python)` project, including setup instructions, API endpoints, and testing procedures with Postman. Let me know if you need any more adjustments!
