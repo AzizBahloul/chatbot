@@ -1,0 +1,15 @@
+# API Framework
+fastapi
+uvicorn
+pydantic
+
+# Data Processing
+pandas
+numpy
+scikit-learn
+
+# NLP & Text Processing
+nltk
+spacy
+contractions
+ftfy

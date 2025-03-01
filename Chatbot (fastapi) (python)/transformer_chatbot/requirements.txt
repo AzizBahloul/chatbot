@@ -1,0 +1,4 @@
+tensorflow
+transformers
+datasets
+huggingface-hub
